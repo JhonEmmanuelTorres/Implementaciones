@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "abstract.hpp"
 
 using namespace std;
@@ -42,11 +43,20 @@ public:
             return NULL;
         return queue[ rear ];
     }
-
     /*
     void put( T theElement )
     {
         if( ( rear + 1 ) % scope == front )
+        {
+            T *newQueue = new T[ 2 * scope ];
+            int start = ( front  + 1 ) % scope;
+            if( start < 2 )
+                copy( queue, queue + start, newQueue );
+            else{
+                copy( queue + start, queue + scope - start, newQueue );
+                copy( queue, start  );
+            }
+        }
     }*/
 
 };

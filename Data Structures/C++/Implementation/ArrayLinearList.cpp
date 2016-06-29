@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    cout << boolalpha << endl; //print true or false with bool
+    cout << boolalpha << endl; //print true or false with the boolens
     ArrayLinearList<string> *names = new ArrayLinearList<string>();
     cout << "is Emply?\t" << names->isEmpty() << endl;
     names->add( 0, "karen" );

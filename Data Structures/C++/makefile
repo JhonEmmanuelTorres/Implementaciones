@@ -1,24 +1,27 @@
 LIBS = -std=c++11
+CC = g++
+BIN = bin
+DIR = Implementation
 
-all: ArrayLinearList ArrayLinearListImproved Chain CircularWithHeader
+all: ArrayLinearList ArrayLinearListImproved ArrayStack ArrayQueue Chain CircularWithHeader LinkedStack
 
 ArrayLinearList:
-	g++ Implementation/ArrayLinearList.cpp -o exe/ArrayLinearList $(LIBS)
+	$(CC) $(DIR)/ArrayLinearList.cpp -o $(BIN)/ArrayLinearList $(LIBS)
 
 ArrayLinearListImproved:
-	g++ Implementation/ArrayLinearListImproved.cpp -o exe/ArrayLinearListImproved $(LIBS)
+	$(CC) $(DIR)/ArrayLinearListImproved.cpp -o $(BIN)/ArrayLinearListImproved $(LIBS)
 
 ArrayStack:
-	g++ Implementation/ArrayStack.cpp -o exe/ArrayStack $(LIBS)
+	$(CC) $(DIR)/ArrayStack.cpp -o $(BIN)/ArrayStack $(LIBS)
 
 ArrayQueue:
-	g++ Implementation/ArrayQueue.cpp -o exe/ArrayQueue $(LIBS)
+	$(CC) -w $(DIR)/ArrayQueue.cpp -o $(BIN)/ArrayQueue $(LIBS)
 
 Chain:
-	g++ Implementation/Chain.cpp -o exe/Chain $(LIBS)
+	$(CC) $(DIR)/Chain.cpp -o $(BIN)/Chain $(LIBS)
 
 CircularWithHeader:
-	g++ Implementation/CircularWithHeader.cpp -o exe/CircularWithHeader $(LIBS)
+	$(CC) $(DIR)/CircularWithHeader.cpp -o $(BIN)/CircularWithHeader $(LIBS)
 
 LinkedStack:
-	g++ Implementation/LinkedStack.cpp -o exe/LinkedStack $(LIBS)
+	$(CC) $(DIR)/LinkedStack.cpp -o $(BIN)/LinkedStack $(LIBS)
